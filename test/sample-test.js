@@ -6,7 +6,6 @@ const { ethers } = require("hardhat");
 describe("nfts", function () {
   let FirstNFT, firstNFT, SecondNFT, secondNFT, owner, addr1, addr2, provider;
    before(async () => {
-     provider = ethers.provider;
     [owner, addr1, addr2] = await ethers.getSigners();
      FirstNFT = await ethers.getContractFactory("firstContract");
      firstNFT = await FirstNFT.deploy();
